@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3427603734936950459}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,9 +95,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b5f183e6a260a44bcaf90fd7be29af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 3244662721530629495, guid: 5354654d8adcf4c41a228b76deac0ea0, type: 3}
-  - {fileID: 8346557247087606172, guid: f1563eeba611fbe4282f044bfe08106a, type: 3}
-  - {fileID: 6887783137625828232, guid: 87ad4f558a0b7c64383e3ab363c3f03b, type: 3}
-  moveSpeed: 3
-  waveConfig: {fileID: 11400000, guid: 7f83b7d9055eab84799584cfe60d029e, type: 2}
+  waypoints: []
+  waveConfig: {fileID: 11400000, guid: 8a980e4c5af279b4b9ec994722aee0df, type: 2}

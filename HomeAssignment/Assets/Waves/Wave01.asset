@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Wave01
   m_EditorClassIdentifier: 
   obstaclePrefab: {fileID: 3427603734936950459, guid: 961c4e650df334c42839b46a22b0ccc0, type: 3}
-  pathPrefab: {fileID: 1679263699766877270, guid: c149af1d10ae3814faeeb2f765df2fd4, type: 3}
-  timeBetweenSpawns: 0.5
-  spawnRandomFactor: 0.3
-  numberOfEnemies: 5
-  enemyMoveSpeed: 2
+  pathPrefab: {fileID: 314409110821203553, guid: c149af1d10ae3814faeeb2f765df2fd4, type: 3}
+  timeBetweenSpawns: 1
+  spawnRandomFactor: 0.6
+  numberOfObstacles: 2
+  obstacleMoveSpeed: 7

@@ -5,7 +5,6 @@ using UnityEngine;
 public class ObstaclePathing : MonoBehaviour
 {
     [SerializeField] List<Transform> waypoints;
-    [SerializeField] float moveSpeed = 2f;
     [SerializeField] WaveConfig waveConfig;
     int waypointIndex = 0;
     // Start is called before the first frame update
@@ -30,7 +29,7 @@ public class ObstaclePathing : MonoBehaviour
             var targetPosition = waypoints[waypointIndex].transform.position;
             //to make sure z position is 0
             targetPosition.z = 0f;
-            var movement = moveSpeed * Time.deltaTime;
+            var movement = waveConfig.GetObstacleMoveSpeed()* Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movement);
 
             //if we reached the trget waypoint
@@ -44,5 +43,9 @@ public class ObstaclePathing : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void SetWaveConfig (WaveConfig waveConfigToSet)
+    {
+        waveConfig = waveConfigToSet;
     }
 }

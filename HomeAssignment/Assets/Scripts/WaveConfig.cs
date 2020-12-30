@@ -15,9 +15,9 @@ public class WaveConfig : ScriptableObject
     //include this random time difference between spawns
     [SerializeField] float spawnRandomFactor = 0.3f;
     //number of enemies in the wave
-    [SerializeField] int numberOfEnemies = 3;
+    [SerializeField] int numberOfObstacles = 3;
     //enemy movement speed
-    [SerializeField] float enemyMoveSpeed = 2f;
+    [SerializeField] float obstacleMoveSpeed = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -57,14 +57,14 @@ public class WaveConfig : ScriptableObject
         return spawnRandomFactor;
     }
 
-    public int GetNumberOfEnemies()
+    public int GetNumberOfObstacles()
     {
-        return numberOfEnemies;
+        return numberOfObstacles;
     }
 
-    public float GetEnemyMoveSpeed()
+    public float GetObstacleMoveSpeed()
     {
-        return enemyMoveSpeed;
+        return obstacleMoveSpeed;
     }
 
 }
