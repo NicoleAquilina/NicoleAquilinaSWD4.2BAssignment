@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
     {
         //saving all the information of the DamageDealer objectLaser in dmg
         DamageDealer damage = otherOject.gameObject.GetComponent<DamageDealer>();
-        Debug.Log("US HERE");
         // if the object does not have a damageDealer class end the method
         if (!damage) //if dmg does not exist
         {
