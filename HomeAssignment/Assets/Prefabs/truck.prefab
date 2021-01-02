@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2231541984940293835}
   - component: {fileID: 1547364826126208628}
   - component: {fileID: -3974018279528542567}
-  m_Layer: 0
+  - component: {fileID: 5832244905778251242}
+  m_Layer: 10
   m_Name: truck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,3 +98,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypoints: []
   waveConfig: {fileID: 0}
+--- !u!60 &5832244905778251242
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804454256733012095}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.12, y: 7.12}
+    newSize: {x: 7.12, y: 7.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.53, y: -0.64}
+      - {x: 0.56, y: -0.62}
+      - {x: 0.59, y: -0.32}
+      - {x: 0.59, y: -0.17999999}
+      - {x: 0.58, y: 0.07}
+      - {x: 0.52, y: 0.32}
+      - {x: 0.42999998, y: 0.32}
+      - {x: 0.58, y: 0.7}
+      - {x: 0.57, y: 1.88}
+      - {x: 0.69, y: 1.8499999}
+      - {x: 0.74, y: 1.86}
+      - {x: 0.74, y: 1.9499999}
+      - {x: 0.65, y: 2.01}
+      - {x: 0.65, y: 2.59}
+      - {x: 0.59999996, y: 2.8799999}
+      - {x: 0.51, y: 2.97}
+      - {x: 0.31, y: 3.09}
+      - {x: 0.22999999, y: 3.09}
+      - {x: 0.14, y: 3.08}
+      - {x: -0.04, y: 3.01}
+      - {x: -0.65, y: 3.09}
+      - {x: -0.71999997, y: 3.09}
+      - {x: -0.74, y: 3.01}
+      - {x: -1.01, y: 2.99}
+      - {x: -1.1, y: 2.84}
+      - {x: -1.13, y: 2.58}
+      - {x: -1.22, y: 1.9599999}
+      - {x: -1.22, y: 1.87}
+      - {x: -1.1999999, y: 1.8499999}
+      - {x: -1.06, y: 1.86}
+      - {x: -1.06, y: 0.65999997}
+      - {x: -1, y: 0.55}
+      - {x: -1.14, y: 0.14999999}
+      - {x: -1.14, y: -0.56}
+      - {x: -1.05, y: -0.59}
+      - {x: -1.04, y: -2.07}
+      - {x: -1.12, y: -2.07}
+      - {x: -1.13, y: -2.78}
+      - {x: -1.04, y: -3.09}
+      - {x: 0.55, y: -3.09}
+      - {x: 0.61, y: -2.33}
+      - {x: 0.56, y: -2.09}
+      - {x: 0.53, y: -2.07}

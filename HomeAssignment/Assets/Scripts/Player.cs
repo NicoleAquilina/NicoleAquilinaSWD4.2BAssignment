@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
+    [SerializeField] int health = 100;
 
     float xMin, xMax, yMin, yMax;
     // Start is called before the first frame update
@@ -42,4 +43,32 @@ public class Player : MonoBehaviour
 
         transform.position = new Vector2(nexXPos, transform.position.y);
     }
+    private void OnTriggerEnter2D(Collider2D otherOject)
+    {
+        //saving all the information of the DamageDealer objectLaser in dmg
+        DamageDealer damage = otherOject.gameObject.GetComponent<DamageDealer>();
+        Debug.Log("US HERE");
+        // if the object does not have a damageDealer class end the method
+        if (!damage) //if dmg does not exist
+        {
+            return;
+        }
+
+        ProcessHit(damage);
+    }
+    
+    private void ProcessHit(DamageDealer damage)
+    {
+        health -= damage.getDamage();
+        Debug.Log(health);
+        //destroy the laser that hits the player
+        damage.Hit();
+
+        if(health <=0)
+        {
+            Destroy(gameObject);
+        }
+    }
+   
+   
 }
