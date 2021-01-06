@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5093140868993103505}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,3 +146,5 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 1
   health: 100
+  deathVFX: {fileID: 6675966496284272002, guid: 413f4a345c0245343835cff4c1cd41ba, type: 3}
+  explosionDuration: 0

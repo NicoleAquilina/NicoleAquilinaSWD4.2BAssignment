@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4416001112292191843}
   m_Layer: 10
   m_Name: cone
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,6 +293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 4
+  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
+  explosionDuration: 0
 --- !u!50 &-4416001112292191843
 Rigidbody2D:
   serializedVersion: 4

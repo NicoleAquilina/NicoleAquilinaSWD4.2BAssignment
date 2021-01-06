@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 1f;
     [SerializeField] int health = 100;
 
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
+
     float xMin, xMax, yMin, yMax;
     // Start is called before the first frame update
     void Start()
@@ -48,8 +51,9 @@ public class Player : MonoBehaviour
         //saving all the information of the DamageDealer objectLaser in dmg
         DamageDealer damage = otherObject.gameObject.GetComponent<DamageDealer>();
         // if the object does not have a damageDealer class end the method
-        if (!damage) //if dmg does not exist
+        if (!damage && otherObject.gameObject.tag == "obstacle") //if dmg does not exist
         {
+            damage.Hit();
             return;
         }
 
@@ -69,6 +73,10 @@ public class Player : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+        //create an explosion particel
+        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        //destroy after 1 sec
+        Destroy(explosion, 1f);
     }
    
    

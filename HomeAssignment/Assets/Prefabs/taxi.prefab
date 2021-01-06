@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3091046133206729390}
   m_Layer: 10
   m_Name: taxi
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,8 +118,6 @@ MonoBehaviour:
   maxTimeBetweenShots: 1
   obstacleLaserPrefab: {fileID: 437901607313299492, guid: 1147f64258d885049869117081b9ca95, type: 3}
   obstacleLaserSpeed: 10
-  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
-  explosionDuration: 1
 --- !u!60 &-6270355857999027769
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -177,6 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
+  explosionDuration: 0
 --- !u!50 &3091046133206729390
 Rigidbody2D:
   serializedVersion: 4
