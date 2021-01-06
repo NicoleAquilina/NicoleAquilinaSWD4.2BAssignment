@@ -8,8 +8,11 @@ public class Obstacle : MonoBehaviour
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
 
-    [SerializeField] GameObject enemyLaserPrefab;
-    [SerializeField] float enemyLaserSpeed = 10f;
+    [SerializeField] GameObject obstacleLaserPrefab;
+    [SerializeField] float obstacleLaserSpeed = 10f;
+
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration;
 
     // Start is called before the first frame update
     void Start()
@@ -33,19 +36,39 @@ public class Obstacle : MonoBehaviour
 
         if (shotCounter <= 0f)
         {
-            EnemyFire();
+            ObstacleFire();
             //reset shotCounter after every fire.
             shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
         }
     }
-    //spawn an enemy Laser from the Enemy's position
-    private void EnemyFire()
+    //spawn an obstacle Laser from the Obstacle's position
+    private void ObstacleFire()
     {
-        GameObject enemyLaser = Instantiate(enemyLaserPrefab, transform.position, Quaternion.identity);
+        GameObject enemyLaser = Instantiate(obstacleLaserPrefab, transform.position, Quaternion.identity);
 
-        //enemy laser shoots downwards, hence -enemyLaserSpeed
-        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -enemyLaserSpeed);
+        //obstacle laser shoots downwards, hence -obstacleLaserSpeed
+        enemyLaser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -obstacleLaserSpeed);
 
     }
+    //private void OnTriggerEnter2D(Collider2D otherObject)
+    //{
+    //    //saving all the information of the DamageDealer objectLaser in dmg
+    //    DamageDealer damage = otherObject.gameObject.GetComponent<DamageDealer>();
+    //    // if the object does not have a damageDealer class end the method
+    //    if (!damage) //if dmg does not exist
+    //    {
+    //        return;
+    //    }
+    //    else
+    //    {
+    //        damage.Hit();
+    //        //create an explosion particel
+    //        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+    //        //destroy after 1 sec
+    //        Destroy(explosion, 1f);
+
+    //    }
+
+    //}
 
 }

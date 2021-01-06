@@ -8,6 +8,7 @@ public class Destroyer : MonoBehaviour
     //whenever our object hits our destoryer it triggers this function
     private void OnTriggerEnter2D(Collider2D otherObject)
     {
+        
         Destroy(otherObject.gameObject);
     }
 

@@ -116,8 +116,10 @@ MonoBehaviour:
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 1
-  enemyLaserPrefab: {fileID: 437901607313299492, guid: 1147f64258d885049869117081b9ca95, type: 3}
-  enemyLaserSpeed: 12
+  obstacleLaserPrefab: {fileID: 437901607313299492, guid: 1147f64258d885049869117081b9ca95, type: 3}
+  obstacleLaserSpeed: 10
+  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
+  explosionDuration: 1
 --- !u!60 &2154457114825949991
 PolygonCollider2D:
   m_ObjectHideFlags: 0

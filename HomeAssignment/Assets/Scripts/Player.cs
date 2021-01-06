@@ -43,10 +43,10 @@ public class Player : MonoBehaviour
 
         transform.position = new Vector2(nexXPos, transform.position.y);
     }
-    private void OnTriggerEnter2D(Collider2D otherOject)
+    private void OnTriggerEnter2D(Collider2D otherObject)
     {
         //saving all the information of the DamageDealer objectLaser in dmg
-        DamageDealer damage = otherOject.gameObject.GetComponent<DamageDealer>();
+        DamageDealer damage = otherObject.gameObject.GetComponent<DamageDealer>();
         // if the object does not have a damageDealer class end the method
         if (!damage) //if dmg does not exist
         {
@@ -60,13 +60,15 @@ public class Player : MonoBehaviour
     {
         health -= damage.getDamage();
         Debug.Log(health);
-        //destroy the laser that hits the player
         damage.Hit();
-
-        if(health <=0)
+        if (health <=0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
    
    
