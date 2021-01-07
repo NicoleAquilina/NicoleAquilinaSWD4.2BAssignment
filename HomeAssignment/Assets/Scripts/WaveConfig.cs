@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "Enemy Wave Config")]
+[CreateAssetMenu (menuName = "Obstacle Wave Config")]
 public class WaveConfig : ScriptableObject
 {
 
