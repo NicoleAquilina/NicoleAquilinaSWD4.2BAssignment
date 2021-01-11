@@ -11,7 +11,7 @@ public class Obstacle : MonoBehaviour
     [SerializeField] GameObject obstacleLaserPrefab;
     [SerializeField] float obstacleLaserSpeed = 10f;
 
-   
+  
 
     // Start is called before the first frame update
     void Start()
