@@ -148,3 +148,5 @@ MonoBehaviour:
   health: 100
   deathVFX: {fileID: 6675966496284272002, guid: 413f4a345c0245343835cff4c1cd41ba, type: 3}
   explosionDuration: 0
+  HealthReduction: {fileID: 8300000, guid: 4f9e0c43e59e3c443a83126ea7d6728b, type: 3}
+  HealthReductionSoundVolume: 0.813
