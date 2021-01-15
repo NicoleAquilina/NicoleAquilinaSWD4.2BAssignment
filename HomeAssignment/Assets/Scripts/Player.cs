@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 1f;
     [SerializeField] int health = 100;
 
-    [SerializeField] GameObject deathVFX;
+    [SerializeField] GameObject DeathVFX;
     [SerializeField] float explosionDuration;
 
     [SerializeField] AudioClip HealthReduction;
@@ -60,11 +60,15 @@ public class Player : MonoBehaviour
     {
         //saving all the information of the DamageDealer objectLaser in dmg
         DamageDealer damage = otherObject.gameObject.GetComponent<DamageDealer>();
-        
+        ObstaceExplostion explostion = otherObject.gameObject.GetComponent<ObstaceExplostion>();
+
         // if the object does not have a damageDealer class end the method
-        if (!damage && otherObject.gameObject.tag == "obstacle") //if dmg does not exist
+        if (otherObject.gameObject.tag == "obstacle") //if dmg does not exist
         {
+            health -= damage.getDamage();
             damage.Hit();
+            explostion.Explosion();
+            AudioSource.PlayClipAtPoint(HealthReduction, Camera.main.transform.position, HealthReductionSoundVolume);
 
             return;
         }
@@ -86,7 +90,7 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
         //create an explosion particel
-        GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        GameObject explosion = Instantiate(DeathVFX, transform.position, Quaternion.identity);
         //destroy after 1 sec
         Destroy(explosion, 1f);
         FindObjectOfType<Level>().LoadGameOver();

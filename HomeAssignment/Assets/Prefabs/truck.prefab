@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5832244905778251242}
   - component: {fileID: -4993069735644763796}
   - component: {fileID: -5259173502934786513}
+  - component: {fileID: 6260293191608633030}
   m_Layer: 10
   m_Name: truck
   m_TagString: obstacle
@@ -181,8 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
-  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
-  explosionDuration: 0
 --- !u!50 &-5259173502934786513
 Rigidbody2D:
   serializedVersion: 4
@@ -204,3 +203,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6260293191608633030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4804454256733012095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76b66e8057a3cb4db90dee28467f935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
+  explosionDuration: 1

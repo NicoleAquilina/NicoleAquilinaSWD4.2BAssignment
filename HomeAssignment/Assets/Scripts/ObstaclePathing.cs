@@ -7,8 +7,6 @@ public class ObstaclePathing : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] WaveConfig waveConfig;
     int waypointIndex = 0;
-    [SerializeField] int points = 5;
-    int sum;
 
     // Start is called before the first frame update
     void Start()
@@ -43,9 +41,9 @@ public class ObstaclePathing : MonoBehaviour
         //if enemy moved to all waypoints
         else
         {
-            sum += points;
+              
             Destroy(gameObject);
-            Debug.Log(sum);
+        
         }
     }
     public void SetWaveConfig (WaveConfig waveConfigToSet)

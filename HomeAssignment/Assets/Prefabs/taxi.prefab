@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6270355857999027769}
   - component: {fileID: 2275727821741238088}
   - component: {fileID: 3091046133206729390}
+  - component: {fileID: -1910777499520209603}
   m_Layer: 10
   m_Name: taxi
   m_TagString: obstacle
@@ -175,8 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
-  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
-  explosionDuration: 0
 --- !u!50 &3091046133206729390
 Rigidbody2D:
   serializedVersion: 4
@@ -198,3 +197,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1910777499520209603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9214556354792154174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76b66e8057a3cb4db90dee28467f935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
+  explosionDuration: 1

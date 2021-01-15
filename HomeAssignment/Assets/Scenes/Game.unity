@@ -253,6 +253,10 @@ PrefabInstance:
       propertyPath: health
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 5093140868993103505, guid: 84652fee94c381d44aab2f7ae24b5ec6, type: 3}
+      propertyPath: DeathVFX
+      value: 
+      objectReference: {fileID: 6675966496284272002, guid: 413f4a345c0245343835cff4c1cd41ba, type: 3}
     - target: {fileID: 6247021351783512953, guid: 84652fee94c381d44aab2f7ae24b5ec6, type: 3}
       propertyPath: m_Name
       value: Player
