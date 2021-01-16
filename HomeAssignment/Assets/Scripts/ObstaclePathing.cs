@@ -38,13 +38,6 @@ public class ObstaclePathing : MonoBehaviour
                 waypointIndex++;
             }
         }
-        //if enemy moved to all waypoints
-        else
-        {
-              
-            Destroy(gameObject);
-        
-        }
     }
     public void SetWaveConfig (WaveConfig waveConfigToSet)
     {
