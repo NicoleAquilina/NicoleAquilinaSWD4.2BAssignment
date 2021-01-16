@@ -13,13 +13,14 @@ public class Player : MonoBehaviour
 
     [SerializeField] AudioClip HealthReduction;
     [SerializeField] [Range(0, 1)] float HealthReductionSoundVolume = 0.75f;
-    GameSession gameSession;
 
+    
     float xMin, xMax, yMin, yMax;
     // Start is called before the first frame update
     void Start()
     {
         SetUpMoveBoundaries();
+        
     }
 
     // Update is called once per frame
@@ -62,7 +63,6 @@ public class Player : MonoBehaviour
         // if the object does not have a damageDealer class end the method
         if (otherObject.gameObject.tag == "obstacle") //if dmg does not exist
         {
-
             ProcessHit(damage);
             explostion.Explosion();
 
@@ -74,14 +74,17 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer damage)
     {
         health -= damage.getDamage();
-        Debug.Log(health);
+       
         AudioSource.PlayClipAtPoint(HealthReduction, Camera.main.transform.position, HealthReductionSoundVolume);
         damage.Hit();
         if (health <=0)
         {
+            
             health = 0;
             Die();
         }
+        
+        
     }
     public int GetHealth()
     {
