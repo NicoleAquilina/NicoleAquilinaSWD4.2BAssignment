@@ -7,6 +7,7 @@ public class ObstaclePathing : MonoBehaviour
     [SerializeField] List<Transform> waypoints;
     [SerializeField] WaveConfig waveConfig;
     int waypointIndex = 0;
+    
 
     // Start is called before the first frame update
     void Start()

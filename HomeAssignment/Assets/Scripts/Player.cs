@@ -6,14 +6,15 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
-    [SerializeField] int health = 100;
+    [SerializeField] int health = 50;
 
     [SerializeField] GameObject DeathVFX;
     [SerializeField] float explosionDuration;
 
     [SerializeField] AudioClip HealthReduction;
     [SerializeField] [Range(0, 1)] float HealthReductionSoundVolume = 0.75f;
-    
+    GameSession gameSession;
+
     float xMin, xMax, yMin, yMax;
     // Start is called before the first frame update
     void Start()
@@ -43,11 +44,7 @@ public class Player : MonoBehaviour
         
     }
 
-    public int GetHealth()
-    {
-        return health;
-    }
-
+    
 
     private void Move()
     {
@@ -65,10 +62,9 @@ public class Player : MonoBehaviour
         // if the object does not have a damageDealer class end the method
         if (otherObject.gameObject.tag == "obstacle") //if dmg does not exist
         {
-            health -= damage.getDamage();
-            damage.Hit();
+
+            ProcessHit(damage);
             explostion.Explosion();
-            AudioSource.PlayClipAtPoint(HealthReduction, Camera.main.transform.position, HealthReductionSoundVolume);
 
             return;
         }
@@ -78,6 +74,7 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer damage)
     {
         health -= damage.getDamage();
+        Debug.Log(health);
         AudioSource.PlayClipAtPoint(HealthReduction, Camera.main.transform.position, HealthReductionSoundVolume);
         damage.Hit();
         if (health <=0)
@@ -86,6 +83,11 @@ public class Player : MonoBehaviour
             Die();
         }
     }
+    public int GetHealth()
+    {
+        return health;
+    }
+
     private void Die()
     {
         Destroy(gameObject);
