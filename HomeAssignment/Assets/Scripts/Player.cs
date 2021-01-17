@@ -14,19 +14,24 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip HealthReduction;
     [SerializeField] [Range(0, 1)] float HealthReductionSoundVolume = 0.75f;
 
-    
+    GameSession gameSession;
+    int total = 100;
+
     float xMin, xMax, yMin, yMax;
     // Start is called before the first frame update
     void Start()
     {
         SetUpMoveBoundaries();
-        
+        gameSession = FindObjectOfType<GameSession>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Move();
+        
     }
     private void SetUpMoveBoundaries()
     {
@@ -74,15 +79,14 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer damage)
     {
         health -= damage.getDamage();
-       
         AudioSource.PlayClipAtPoint(HealthReduction, Camera.main.transform.position, HealthReductionSoundVolume);
         damage.Hit();
-        if (health <=0)
+        if ((health <=0) && (gameSession.GetScore() < 100))
         {
-            
             health = 0;
             Die();
         }
+        
         
         
     }

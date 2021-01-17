@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameSession : MonoBehaviour
 {
-    int score = 0;
+     public int score = 0;
 
     private void Awake()
     {
@@ -28,13 +28,15 @@ public class GameSession : MonoBehaviour
     //get the value of score
     public int GetScore()
     {
+       // Debug.Log(score);
         return score;
     }
 
     //add scoreValue to score
     public void AddToScore(int scoreValue)
-    {
+    {  
         score += scoreValue;
+        
     }
 
     public void ResetGame()
