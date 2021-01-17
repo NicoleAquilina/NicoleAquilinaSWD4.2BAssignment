@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 3297061970274948508}
   - component: {fileID: 3297061970274948510}
   - component: {fileID: 3297061970274948509}
-  - component: {fileID: 7282518015137993078}
+  - component: {fileID: 3297061970274948511}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -642,8 +642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 48, y: 77.382}
-  m_SizeDelta: {x: 318.5135, y: 154.76392}
+  m_AnchoredPosition: {x: 39.4, y: 77.382}
+  m_SizeDelta: {x: 335.66473, y: 154.76392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3297061970274948509
 MonoBehaviour:
@@ -687,6 +687,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3297061970274948507}
   m_CullTransparentMesh: 0
+--- !u!114 &3297061970274948511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297061970274948507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55300ff302bdef409d4e16541348c21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7270453913090593330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -792,15 +804,3 @@ PrefabInstance:
       objectReference: {fileID: 694130388}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0d9a673ddd441c45887104cd24b4d05, type: 3}
---- !u!114 &7282518015137993078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3297061970274948507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b55300ff302bdef409d4e16541348c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

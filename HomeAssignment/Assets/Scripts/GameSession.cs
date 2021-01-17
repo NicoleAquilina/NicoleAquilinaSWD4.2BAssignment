@@ -28,7 +28,7 @@ public class GameSession : MonoBehaviour
     //get the value of score
     public int GetScore()
     {
-       // Debug.Log(score);
+       //Debug.Log(score);
         return score;
     }
 

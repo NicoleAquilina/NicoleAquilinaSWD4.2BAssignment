@@ -70,3 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f535c385185b844941be6579315b0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 5
+  HealthReduction: {fileID: 8300000, guid: 3162885b25c5c1e42b0b6eda5a2e6a14, type: 3}
+  HealthReductionSoundVolume: 0.75

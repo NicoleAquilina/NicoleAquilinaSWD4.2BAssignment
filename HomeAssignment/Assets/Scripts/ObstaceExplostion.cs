@@ -6,8 +6,6 @@ public class ObstaceExplostion : MonoBehaviour
 {
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration;
-    [SerializeField] int points = 5;
-    int sum;
 
     public void Explosion()
     {
@@ -17,9 +15,4 @@ public class ObstaceExplostion : MonoBehaviour
         Destroy(explosion, 1f);
     }
 
-    public void Points()
-    {
-        sum += points;
-        Debug.Log(sum);
-    }
 }

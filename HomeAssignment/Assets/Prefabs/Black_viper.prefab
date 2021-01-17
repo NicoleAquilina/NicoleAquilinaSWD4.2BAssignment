@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5868751302427814994}
   - component: {fileID: -82086813499719279}
   - component: {fileID: -6420156091539237932}
-  - component: {fileID: 7184989204346422832}
   - component: {fileID: 6152954309168507466}
   - component: {fileID: -4040224894154295383}
+  - component: {fileID: 54848165443518408}
   m_Layer: 10
   m_Name: Black_viper
   m_TagString: obstacle
@@ -122,7 +122,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &7184989204346422832
+--- !u!114 &6152954309168507466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627805405827564097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45dbbc6d5d515194abaea83a0c05add1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!114 &-4040224894154295383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1627805405827564097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76b66e8057a3cb4db90dee28467f935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
+  explosionDuration: 1
+--- !u!60 &54848165443518408
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,31 +197,3 @@ PolygonCollider2D:
       - {x: 0.45999998, y: -1.01}
       - {x: 0.58, y: -0.7}
       - {x: 0.57, y: -0.35}
---- !u!114 &6152954309168507466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627805405827564097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45dbbc6d5d515194abaea83a0c05add1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
---- !u!114 &-4040224894154295383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1627805405827564097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76b66e8057a3cb4db90dee28467f935, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathVFX: {fileID: 830409409985805920, guid: 0ad9302c5bc1d944091cbc60acdb3c56, type: 3}
-  explosionDuration: 1
-  points: 5

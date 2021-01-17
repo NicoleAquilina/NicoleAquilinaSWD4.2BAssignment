@@ -19,17 +19,6 @@ public class WaveConfig : ScriptableObject
     //enemy movement speed
     [SerializeField] float obstacleMoveSpeed = 2f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public GameObject GetObstaclePrefab()
     {
         return obstaclePrefab;
