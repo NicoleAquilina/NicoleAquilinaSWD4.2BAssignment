@@ -48,7 +48,7 @@ public class ObstacleSpawner : MonoBehaviour
         //this will loop from startingWave until we reach the last within our list
         for(int waveIndex = startWave; waveIndex < waveConfigs.Count; waveIndex++)
         {
-            var currentWave = waveConfigs[waveIndex]; ;
+            var currentWave = waveConfigs[waveIndex]; 
             //the coroutine will wait for all enemies in Wave to spawn 
             //before yielding adn going to the next loop
             yield return StartCoroutine(SpawnAllObstacles(currentWave));
